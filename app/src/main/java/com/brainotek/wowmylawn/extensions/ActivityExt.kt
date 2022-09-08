@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.view.View
 import android.view.WindowManager
+import android.widget.ImageView
 import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -12,6 +13,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.brainotek.wowmylawn.R
 import com.brainotek.wowmylawn.listener.DialogListeners
+import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
@@ -191,4 +193,8 @@ fun <T> List<T>.customFilterList(filterFunction: (T) -> (Boolean)): List<T> {
         }
     }
     return resultList
+}
+
+fun AppCompatActivity.setUpSplashBackgroundImage(imgBackground: ImageView) {
+    Glide.with(this).load(R.mipmap.logo).into(imgBackground)
 }

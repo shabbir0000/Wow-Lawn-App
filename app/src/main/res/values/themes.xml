@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.WowMyLawn" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.WowMyLawn" parent="Theme.Material3.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryVariant">@color/mirage</item>
@@ -9,8 +9,12 @@
         <item name="colorSecondary">@color/blue</item>
         <item name="colorSecondaryVariant">@color/background</item>
         <item name="colorOnSecondary">@color/mirage</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
         <!-- Customize your theme here. -->
     </style>
+
 </resources>

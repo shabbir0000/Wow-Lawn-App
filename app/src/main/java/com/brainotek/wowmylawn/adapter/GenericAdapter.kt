@@ -61,7 +61,7 @@ class GenericAdapter<T> internal constructor(
 
         fun bind(item: T) {
             binding.setVariable(BR.item, item)
-            binding.setVariable(BR.listener, itemClickListener)
+//            binding.setVariable(BR.listener, itemClickListener)
             binding.executePendingBindings()
         }
     }

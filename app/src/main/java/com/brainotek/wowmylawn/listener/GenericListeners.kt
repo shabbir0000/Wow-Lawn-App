@@ -3,6 +3,10 @@ package com.brainotek.wowmylawn.listener
 
 interface GenericListeners {
 
+    fun onTapGetStarted() {}
+
+    fun onTapDone(){}
+
     /**
      * when user tap on sign up button
      */

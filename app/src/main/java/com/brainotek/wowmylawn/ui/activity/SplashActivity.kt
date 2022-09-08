@@ -5,6 +5,8 @@ import android.os.Handler
 import android.os.Looper
 import com.brainotek.wowmylawn.databinding.ActivitySplashBinding
 import com.brainotek.wowmylawn.extensions.gotoActivityWithNoHistory
+import com.brainotek.wowmylawn.extensions.setUpSplashBackgroundImage
+import com.brainotek.wowmylawn.storage.AppPreferences
 import com.brainotek.wowmylawn.utils.Constant
 
 class SplashActivity : BaseActivity() {
@@ -14,20 +16,25 @@ class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setUpSplashBackgroundImage(binding.appCompatImageView)
 
         handler = Handler(Looper.getMainLooper())
 
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
         handler.postDelayed({
-//            AppPreferences.loginData?.let {
-//                //gotoActivityWithNoHistory(HomeActivity::class.java)
-//            } ?: kotlin.run {
-//                gotoActivityWithNoHistory(LoginActivity::class.java)
-//            }
-            gotoActivityWithNoHistory(LoginActivity::class.java)
+            gotoActivityWithNoHistory(GetStartedActivity::class.java)
+
+            AppPreferences.loginData?.let {
+                //gotoActivityWithNoHistory(HomeActivity::class.java)
+            } ?: kotlin.run {
+            }
         }, Constant.SPLASH_TIME)
     }
 }

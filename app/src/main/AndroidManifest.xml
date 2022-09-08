@@ -18,10 +18,23 @@
         android:theme="@style/Theme.WowMyLawn"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.brainotek.wowmylawn.ui.activity.LoginActivity"
+            android:name=".ui.activity.HomeActivity"
+            android:exported="false"
+             />
+        <activity
+            android:name=".ui.activity.OTPActivity"
             android:exported="false" />
         <activity
-            android:name="com.brainotek.wowmylawn.ui.activity.SplashActivity"
+            android:name=".ui.activity.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.GetStartedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

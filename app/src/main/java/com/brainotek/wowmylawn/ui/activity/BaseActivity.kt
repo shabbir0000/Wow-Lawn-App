@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.brainotek.wowmylawn.databinding.LayoutLoadingBinding
 import com.brainotek.wowmylawn.extensions.gotoActivityWithNoHistory
 import com.brainotek.wowmylawn.extensions.showMaterialAlertDialog
@@ -31,6 +32,7 @@ open class BaseActivity : AppCompatActivity() {
          * Set the application Orientation
          */
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
     }
 
     fun showProgressIndicator(layoutLoadingBinding: LayoutLoadingBinding) {
