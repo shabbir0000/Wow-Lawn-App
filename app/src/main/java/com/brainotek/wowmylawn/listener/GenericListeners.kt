@@ -7,6 +7,10 @@ interface GenericListeners {
 
     fun onTapDone(){}
 
+    fun onTapSideDrawer(){}
+
+    fun onTapSelectAddress(){}
+
     /**
      * when user tap on sign up button
      */

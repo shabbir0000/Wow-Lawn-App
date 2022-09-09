@@ -13,23 +13,30 @@
         <entry key="app/src/main/res/drawable/field_rounded_background.xml" value="0.164" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/green_dot.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_bell_icon.xml" value="0.2385" />
+        <entry key="app/src/main/res/drawable/ic_calender_icon.xml" value="0.2385" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.164" />
         <entry key="app/src/main/res/drawable/ic_lock_icon.xml" value="0.2385" />
+        <entry key="app/src/main/res/drawable/ic_logout_icon.xml" value="0.2385" />
         <entry key="app/src/main/res/drawable/ic_person.xml" value="0.2385" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.164" />
         <entry key="app/src/main/res/drawable/ic_search_icon.xml" value="0.2385" />
+        <entry key="app/src/main/res/drawable/ic_tick_icon.xml" value="0.2385" />
         <entry key="app/src/main/res/drawable/photo.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/picture.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/search.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/shape_circle_blue.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/shape_rectangle_blue_fill.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/stroke_bg.xml" value="0.164" />
         <entry key="app/src/main/res/drawable/top_rounded_bg.xml" value="0.164" />
         <entry key="app/src/main/res/drawable/user.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/white_circle.xml" value="0.164" />
+        <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_otp.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_otpactivity.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.25" />

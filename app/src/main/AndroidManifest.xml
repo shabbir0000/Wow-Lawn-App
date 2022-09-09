@@ -18,9 +18,14 @@
         android:theme="@style/Theme.WowMyLawn"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.activity.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.DrawerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.HomeActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".ui.activity.OTPActivity"
             android:exported="false" />

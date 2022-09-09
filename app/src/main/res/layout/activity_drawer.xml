@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green"
+    tools:context=".ui.activity.DrawerActivity">
+
+
+    <io.github.florent37.shapeofview.shapes.CircleView
+        android:id="@+id/profileImageViewLayout"
+        android:layout_width="@dimen/_60sdp"
+
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="16dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/dummy" />
+
+    </io.github.florent37.shapeofview.shapes.CircleView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/light_grey"
+        android:background="@drawable/top_rounded_bg">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/account"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/notification"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="Notification"
+            android:textColor="@color/dark_blue"
+            app:drawableStartCompat="@drawable/ic_bell_icon"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notification" />
+
+        <TextView
+            android:id="@+id/myBookings"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="My Bookings"
+            android:textColor="@color/dark_blue"
+            app:drawableStartCompat="@drawable/ic_calender_icon"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myBookings" />
+
+        <TextView
+            android:id="@+id/myProfile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="My Profile"
+            android:textColor="@color/dark_blue"
+            app:drawableStartCompat="@drawable/ic_tick_icon"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myProfile" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="Logout"
+            android:textColor="@color/dark_blue"
+            app:drawableStartCompat="@drawable/ic_logout_icon"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

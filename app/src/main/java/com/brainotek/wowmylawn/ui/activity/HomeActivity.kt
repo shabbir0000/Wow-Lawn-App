@@ -6,6 +6,8 @@ import com.brainotek.wowmylawn.R
 import com.brainotek.wowmylawn.adapter.GenericAdapter
 import com.brainotek.wowmylawn.databinding.ActivityHomeBinding
 import com.brainotek.wowmylawn.extensions.changeStatusBarColor
+import com.brainotek.wowmylawn.extensions.gotoActivity
+import com.brainotek.wowmylawn.listener.GenericListeners
 
 class HomeActivity : BaseActivity() {
 
@@ -20,6 +22,17 @@ class HomeActivity : BaseActivity() {
         changeStatusBarColor(R.color.green)
 
         setAdapter()
+
+
+        binding.listener = object  : GenericListeners{
+            override fun onTapSideDrawer() {
+                gotoActivity(DrawerActivity::class.java)
+            }
+
+            override fun onTapSelectAddress() {
+                gotoActivity(MapActivity::class.java)
+            }
+        }
     }
 
     private fun setAdapter() {

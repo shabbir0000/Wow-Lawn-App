@@ -13,5 +13,6 @@
     <color name="green">#01B552</color>
     <color name="dark_blue">#24323F</color>
     <color name="field_color">#F8FAFD</color>
+    <color name="light_grey">#FAFAFA</color>
 
 </resources>
