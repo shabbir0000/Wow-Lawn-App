@@ -1,73 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.activity.MapActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_250sdp"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/dummy_map" />
+        <variable
+            name="listener"
+            type="com.brainotek.wowmylawn.listener.GenericListeners" />
+    </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_13sdp"
-            android:fontFamily="@font/montserrat_regular"
-            android:gravity="center"
-            android:text="@string/move_the_marker_above_to_drop_a_n_pin_on_your_address"
-            android:textColor="@color/grey"
-            android:textSize="@dimen/_9ssp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        tools:context=".ui.activity.MapActivity">
 
 
-        <TextView
-            android:id="@+id/textView9"
+        <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/stroke_bg"
-            android:gravity="center"
-            android:padding="@dimen/_2sdp"
-            android:text="Address Here : Lorem Ipsum Lorem Ipsum Lorem,
+            android:layout_height="@dimen/_250sdp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/dummy_map" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/move_the_marker_above_to_drop_a_n_pin_on_your_address"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/stroke_bg"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:text="Address Here : Lorem Ipsum Lorem Ipsum Lorem,
 Lorem Ipsum Lorem Ipsum - Lorem Ipsum        "
-            android:textSize="@dimen/_9ssp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.487"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/btn_bg"
-            android:fontFamily="@font/montserrat_semibold"
-            android:paddingVertical="@dimen/_10sdp"
-            android:text="Create Your Booking"
-            android:textAllCaps="false"
-            android:textSize="@dimen/_10ssp"
-            app:backgroundTint="@color/green"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/montserrat_semibold"
+                android:onClick="@{ () -> listener.createBooking()}"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Create Your Booking"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10ssp"
+                app:backgroundTint="@color/green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

@@ -11,10 +11,6 @@ interface GenericListeners {
 
     fun onTapSelectAddress(){}
 
-    /**
-     * when user tap on sign up button
-     */
-    fun onTapNewAccount() {}
 
     /*
     * When login button click
@@ -31,18 +27,15 @@ interface GenericListeners {
     * */
     fun onTapRegister() {}
 
-    /*
-    * When forget password button click
-    * */
-    fun onTapForgot() {}
+    fun createBooking() {}
+
 
     /**
      * When User click profile icon
      */
     fun onTapProfile() {}
 
-    /**
-     * When User click on Logout
-     */
-    fun onTapLogout() {}
+
+
+    fun onTapMyBookings(){}
 }

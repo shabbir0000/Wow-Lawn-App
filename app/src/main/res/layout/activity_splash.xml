@@ -26,7 +26,7 @@
         android:layout_marginHorizontal="8dp"
         android:text="@string/the_simplest_way_to_have_lawn_property_work_done"
         android:textColor="@color/green"
-        android:textSize="@dimen/_9ssp"
+        android:textSize="@dimen/_8ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"

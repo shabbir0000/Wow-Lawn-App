@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.brainotek.wowmylawn.listener.GenericListeners" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.activity.LoginActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="CREATE NEW BOOKING"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                android:layout_marginTop="8dp"
+                android:background="@color/green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+            <EditText
+                android:id="@+id/nameField"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/field_rounded_background"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Booking Title"
+                android:inputType="text"
+                android:paddingStart="@dimen/_15sdp"
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+            <TextView
+                android:id="@+id/typeFieldSelector"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/field_rounded_background"
+                android:drawableStart="@drawable/green_dot"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:hint="Select Date"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameField" />
+
+            <EditText
+                android:id="@+id/selectTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/field_rounded_background"
+                android:drawableStart="@drawable/ic_lock_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Select Time"
+                android:inputType="text"
+                android:paddingStart="@dimen/_15sdp"
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/typeFieldSelector" />
+
+            <EditText
+                android:id="@+id/offerService"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/field_rounded_background"
+                android:drawableStart="@drawable/ic_lock_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Offer Service Fee"
+                android:inputType="text"
+                android:paddingStart="@dimen/_15sdp"
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectTime" />
+
+            <EditText
+
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/field_rounded_background"
+                android:drawableStart="@drawable/ic_lock_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Description"
+                android:inputType="text"
+                android:paddingStart="@dimen/_15sdp"
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/offerService" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="169dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/montserrat_semibold"
+                android:onClick="@{ () -> listener.createBooking()}"
+                android:paddingHorizontal="@dimen/_25sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Create"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10ssp"
+                app:backgroundTint="@color/green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -18,6 +18,15 @@
         android:theme="@style/Theme.WowMyLawn"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.activity.BookingListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.MyProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CreateBookingActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.MapActivity"
             android:exported="false" />
         <activity
