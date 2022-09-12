@@ -31,7 +31,7 @@ android {
         applicationVariants.all { variant ->
             variant.outputs.all {
                 def versionName = variant.versionName
-                def flavor = "Learn Koin"
+                def flavor = "WowMyLawn"
                 outputFileName = "$flavor-${versionName}-${releaseTime()}.apk"
             }
         }
