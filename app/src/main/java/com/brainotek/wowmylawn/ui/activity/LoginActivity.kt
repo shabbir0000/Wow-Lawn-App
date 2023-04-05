@@ -16,7 +16,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class LoginActivity : BaseActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-    
+
     /**
      * lazy delegate property to inject a ViewModel into a property
      */
@@ -26,12 +26,46 @@ class LoginActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.lifecycleOwner = this
 
-        binding.listener = object  : GenericListeners{
+        binding.listener = object : GenericListeners {
             override fun onTapRegister() {
-                gotoActivity(RegistrationActivity::class.java)
+                binding.isLoading = true
+//                gotoActivity(RegistrationActivity::class.java)
+            }
+
+            override fun onTapLogin() {
+                viewModel.loginRequest(
+                    LoginRequest(
+                        binding.email.text.toString(),
+                        binding.password.text.toString(),
+                        "token"
+                    )
+                )
             }
         }
+
+        viewModel.loginResponse.observe(this, Observer {
+            it?.let {
+                when (it) {
+                    is ApiResponseCallback.Error -> {
+                        binding.isLoading = false
+                        genericNetworkErrorHandler(it) {}
+
+                    }
+                    is ApiResponseCallback.Loading -> {
+                        binding.isLoading = true
+
+
+                    }
+                    is ApiResponseCallback.Success -> {
+
+                        binding.isLoading = false
+
+                    }
+                }
+            }
+        })
 
 
     }

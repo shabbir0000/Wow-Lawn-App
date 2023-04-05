@@ -26,4 +26,5 @@
     <string name="verify_otp">VERIFY OTP</string>
     <string name="account">Account</string>
     <string name="move_the_marker_above_to_drop_a_n_pin_on_your_address">Move the Marker above to drop a \n pin on your address</string>
+    <string name="sign_in">Sign In</string>
 </resources>

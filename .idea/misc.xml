@@ -34,11 +34,11 @@
         <entry key="app/src/main/res/drawable/user.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/white_circle.xml" value="0.164" />
         <entry key="app/src/main/res/layout/activity_booking_list.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_create_booking.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/activity_create_booking.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2671875" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_my_profile.xml" value="0.335" />

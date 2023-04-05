@@ -3,6 +3,7 @@ package com.brainotek.wowmylawn.network.domain
 import com.brainotek.wowmylawn.R
 import com.brainotek.wowmylawn.network.ApiResponseCallback
 import com.brainotek.wowmylawn.utils.Utils
+import com.google.gson.Gson
 import retrofit2.Response
 
 data class ErrorHandler(
@@ -34,17 +35,20 @@ class APIError {
         const val UNEXPECTED_ERROR_OCCURRED = "unexpected_error"
 
         fun <T> error(error: Throwable): ApiResponseCallback<T> {
-            return ApiResponseCallback.Error(error.toString(), UNEXPECTED_ERROR)
+            return ApiResponseCallback.Error(error.toString(), UNEXPECTED_ERROR,error)
         }
 
         fun <T> error(response: Response<T>): ApiResponseCallback<T> {
 
             val code = response.code()
             val message = response.message()
+            val errorBody = response.errorBody()?.string()
+
 
             return ApiResponseCallback.Error(
                 "Network call has failed for a following reason: $message",
-                code
+                code,
+                errorBody
             )
         }
 
@@ -52,13 +56,23 @@ class APIError {
             apiResponseCallback: ApiResponseCallback<T>,
             errorHandler: (ErrorHandler) -> Unit
         ) {
-            emitError(apiResponseCallback, errorHandler)
+            val responseError: ResponseError = responseError(apiResponseCallback)
+            emitError(apiResponseCallback, responseError, errorHandler)
+        }
+
+        private fun <T> responseError(resource: ApiResponseCallback<T>): ResponseError {
+            val gson = Gson()
+            val error = resource.error.toString()
+            return gson.fromJson(error, ResponseError::class.java)
         }
 
         private fun <T> emitError(
             apiResponseCallback: ApiResponseCallback<T>,
+            responseError: ResponseError,
             errorHandler: (ErrorHandler) -> Unit
         ) {
+
+            val error = responseError.errors?.error?: apiResponseCallback.error.toString()
 
             /**
              * Check For Internet Connection
@@ -127,7 +141,7 @@ class APIError {
                 else -> {
                     errorHandler(
                         ErrorHandler(
-                            messageID = R.string.unexpected_error_occurred,
+                            message = error,
                             errorStatus = UNEXPECTED_ERROR_OCCURRED
                         )
                     )

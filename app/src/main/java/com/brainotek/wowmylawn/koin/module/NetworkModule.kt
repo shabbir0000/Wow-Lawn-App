@@ -66,7 +66,6 @@ fun provideOkHttpClient(): OkHttpClient{
 
     client.addInterceptor { chain: Interceptor.Chain ->
         val newRequest = chain.request().newBuilder()
-            .addHeader("Authorization", "Bearer ".plus(AppPreferences.loginData?.token))
             .build()
         chain.proceed(newRequest)
     }

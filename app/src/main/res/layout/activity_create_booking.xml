@@ -155,9 +155,9 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/materialButton"
-                android:layout_width="169dp"
-                android:layout_height="63dp"
-                android:layout_marginTop="20dp"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:background="@drawable/btn_bg"
                 android:fontFamily="@font/montserrat_semibold"
                 android:onClick="@{ () -> listener.createBooking()}"

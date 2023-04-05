@@ -45,6 +45,7 @@
             android:name=".ui.activity.GetStartedActivity"
             android:exported="false" />
         <activity
+            android:windowSoftInputMode="adjustResize"
             android:name=".ui.activity.LoginActivity"
             android:exported="false" />
         <activity

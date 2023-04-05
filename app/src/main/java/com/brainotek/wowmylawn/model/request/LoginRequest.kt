@@ -5,10 +5,13 @@ import org.apache.commons.lang3.StringUtils
 
 
 data class LoginRequest(
-    
-    @SerializedName("phone")
-    var phone: String = StringUtils.EMPTY,
+
+    @SerializedName("email")
+    var email: String = StringUtils.EMPTY,
 
     @SerializedName("password")
-    var password: String = StringUtils.EMPTY
+    var password: String = StringUtils.EMPTY,
+
+    @SerializedName("device_token")
+    var device_token: String = StringUtils.EMPTY
 )

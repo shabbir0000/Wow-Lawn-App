@@ -11,7 +11,7 @@ suspend fun <T> performNetworkCallOperation(
     responseStatus.data?.let { response ->
         return ApiResponseCallback.Success(response)
     }
-    return ApiResponseCallback.Error(responseStatus.message, responseStatus.code)
+    return ApiResponseCallback.Error(responseStatus.message, responseStatus.code,responseStatus.error)
 }
 
 suspend fun <T> performNetworkCallOperation(
@@ -24,5 +24,5 @@ suspend fun <T> performNetworkCallOperation(
         saveCallResult(response)
         return ApiResponseCallback.Success(response)
     }
-    return ApiResponseCallback.Error(responseStatus.message, responseStatus.code)
+    return ApiResponseCallback.Error(responseStatus.message, responseStatus.code,responseStatus.error)
 }

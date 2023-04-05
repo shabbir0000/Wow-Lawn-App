@@ -5,7 +5,7 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
-class GlobalResponse
+open class BaseResponse
 {
     @SerializedName("success")
     @Expose

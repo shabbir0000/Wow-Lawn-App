@@ -12,8 +12,4 @@ interface SoService
     @POST(Routes.LOGIN)
     suspend fun login(@Body loginRequest: LoginRequest): Response<LoginResponse>
 
-    @POST(Routes.REGISTRATION)
-    suspend fun registration(
-        @Body registrationRequest: RegistrationRequest
-    ): LoginResponse
 }

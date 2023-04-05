@@ -22,6 +22,7 @@ class UserViewModel : ViewModel() {
     private val _loginResponse = MutableLiveData<ApiResponseCallback<LoginResponse>>()
     val loginResponse: LiveData<ApiResponseCallback<LoginResponse>>
         get() = _loginResponse
+
     fun loginRequest(loginRequest: LoginRequest) {
         _loginResponse.value = ApiResponseCallback.Loading()
         viewModelScope.launch {
